@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Budget Planning</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>happierwork</h1>
+        
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        
+        <div id="project-section" style="display:none;">
+            <h2>planning Projects</h2>
+            <input type="text" id="project-name" placeholder="Project Name">
+            <input type="email" id="project-description" placeholder="Project Description">
+            <button onclick="createProject()">Create Project</button>
+            
+            
+            <div id="budget-section" style="display:none;">
+                <h3>Current Project: <span id="current-project-name"></span></h3>
+                <h3>Positions & Budgets</h3>
+                <ul id="position-list"></ul>
+                <input type="text" id="position-name" placeholder="Position Name">
+                <input type="number" id="position-budget" placeholder="Salary Budget">
+                <button onclick="addPosition()">Add Position</button>
+                <h4>Total Budget: $<span id="total-budget">0</span></h4>
+                <h4>Remaining Budget: $<span id="remaining-budget">0</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
